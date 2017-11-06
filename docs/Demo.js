@@ -8,7 +8,7 @@ import {
   LiveEditor,
 } from 'react-live'
 import { Flex, Box } from 'grid-styled'
-import XRay from 'react-x-ray'
+// import XRay from 'react-x-ray'
 import {
   space,
   width,
@@ -91,16 +91,13 @@ const Demo = props => (
     code={banner}
     mountStylesheet={false}>
     <Err />
-    <XRay
-      color={colors.blue}
-      backgroundColor={colors.dark}
-      disabled={!props.xray}>
+
       <Preview />
-    </XRay>
     <Bar />
     <Editor p={3} />
   </Provider>
 )
+// <XRay color={colors.blue} backgroundColor={colors.dark} disabled={!props.xray}> </XRay>
 
 
 export default connect()(Demo)
