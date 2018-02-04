@@ -31,6 +31,7 @@ import system, {
   focus,
   active,
   disabled,
+  tag,
 } from './src'
 
 const theme = {
@@ -1209,4 +1210,24 @@ test('disabled uses theme values', t => {
       backgroundColor: theme.colors.green,
     }
   })
+})
+
+test('tag removes blacklisted props', t => {
+  const json = render(
+    React.createElement(tag.h2, {
+      id: 'hi',
+      color: 'tomato'
+    })
+  ).toJSON()
+  t.is(json.props.id, 'hi')
+  t.is(json.props.color, undefined)
+})
+
+test('tag defaults to a div', t => {
+  const json = render(
+    React.createElement(tag(), {
+      id: 'hi',
+    })
+  ).toJSON()
+  t.is(json.type, 'div')
 })

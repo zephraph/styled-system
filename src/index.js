@@ -37,6 +37,7 @@ const cleanElement = require('./clean-element')
 const removeProps = require('./remove-props')
 const util = require('./util')
 const constants = require('./constants')
+const tag = require('./clean-tag')
 
 module.exports = {
   space,
@@ -69,5 +70,6 @@ module.exports = {
   cleanElement,
   removeProps,
   util,
-  constants
+  constants,
+  tag
 }

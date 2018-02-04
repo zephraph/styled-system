@@ -28,7 +28,7 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.24.1",
+    "babel-register": "^6.26.0",
     "benchmark": "^2.1.4",
     "bundlesize": "^0.16.0",
     "codecov": "^2.2.0",
@@ -61,9 +61,16 @@
     "url": "git+https://github.com/jxnblk/styled-system.git"
   },
   "dependencies": {
+    "html-tags": "^2.0.0",
     "prop-types": "^15.6.0"
   },
   "peerDependencies": {
     "react": "^0.14.x || ^15.x || ^16.x"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }
