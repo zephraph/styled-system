@@ -4,7 +4,7 @@
   "scripts": {
     "bench": "node bench",
     "clean": "node scripts/clean",
-    "docs": "x0 dev app/App.js",
+    "docs": "x0 dev docs/App.js",
     "test": "node scripts/test",
     "prepare": "node scripts/run install"
   },
@@ -17,7 +17,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
-    "@compositor/x0": "^3.1.1",
+    "@compositor/x0": "^3.2.0",
     "benchmark": "^2.1.4",
     "is-ci": "^1.1.0"
   },
