@@ -72,6 +72,10 @@ export const letterSpacing = style({
   numberToPx: true
 })
 
+export const direction = responsiveStyle({
+  prop: 'direction'
+})
+
 // layout
 export const display = responsiveStyle({
   prop: 'display'

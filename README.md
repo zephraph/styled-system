@@ -785,6 +785,7 @@ Function Name | Prop       | CSS Property    | Theme Field  | Responsive
 `lineHeight`  | `lineHeight` | `line-height` | `lineHeights` | no
 `fontWeight`  | `fontWeight` | `font-weight` | `fontWeights` | no
 `letterSpacing` | `letterSpacing` | `letter-spacing` | `letterSpacings` | no
+`direction` | `direction` | `direction` | none | yes
 
 Function Name | Prop       | CSS Property    | Theme Field  | Responsive
 --------------|------------|-----------------|--------------|-----------

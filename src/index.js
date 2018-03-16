@@ -14,6 +14,7 @@ export {
   lineHeight,
   fontWeight,
   letterSpacing,
+  direction,
   // layout
   display,
   maxWidth,

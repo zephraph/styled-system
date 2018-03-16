@@ -22,6 +22,7 @@ import {
   lineHeight,
   fontWeight,
   letterSpacing,
+  direction,
 
   display,
   maxWidth,
@@ -999,6 +1000,11 @@ test('letterSpacing returns a scalar style', t => {
     letterSpacing: 2
   })
   t.deepEqual(a, { letterSpacing: '3px' })
+})
+
+test('direction returns direction', t => {
+  const a = direction({ direction: 'rtl' })
+  t.deepEqual(a, { direction: 'rtl' })
 })
 
 test('display returns display', t => {
