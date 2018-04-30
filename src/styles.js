@@ -1,3 +1,4 @@
+import deepmerge from 'deepmerge'
 import * as util from './util'
 import {
   style,
@@ -273,13 +274,14 @@ export const borderLeft = responsiveStyle({
   getter: getBorder
 })
 
-export const borders = props => ({
-  ...border(props),
-  ...borderTop(props),
-  ...borderRight(props),
-  ...borderBottom(props),
-  ...borderLeft(props)
-})
+export const borders = props => deepmerge.all([
+  border(props),
+  borderTop(props),
+  borderRight(props),
+  borderBottom(props),
+  borderLeft(props)
+].filter(obj => obj !== null))
+
 borders.propTypes = {
   ...border.propTypes,
   ...borderTop.propTypes,

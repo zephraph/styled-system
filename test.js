@@ -1288,6 +1288,18 @@ test('borders combines multiple border styles', t => {
 })
 
 
+test('borders combines multiple responsive border styles', t => {
+  const a = borders({
+    borderTop: [ '1px solid', 'none' ],
+    borderBottom: [ '2px solid', 'none' ]
+  })
+  t.is(a.borderTop, '1px solid')
+  t.is(a.borderBottom, '2px solid')
+  t.is(a[`@media screen and (min-width: 40em)`].borderTop, 'none')
+  t.is(a[`@media screen and (min-width: 40em)`].borderBottom, 'none')
+})
+
+
 test('boxShadow returns box-shadow styles', t => {
   const a = boxShadow({ boxShadow: '0 0 8px rgba(0, 0, 0, .125)' })
   t.deepEqual(a, { boxShadow: '0 0 8px rgba(0, 0, 0, .125)' })
